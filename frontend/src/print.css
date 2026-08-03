@@ -1,0 +1,22 @@
+.ticket-imprimir {
+    display: none;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .ticket-imprimir,
+    .ticket-imprimir * {
+        visibility: visible;
+    }
+    .ticket-imprimir {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    @page {
+        margin: 0;
+    }
+}
